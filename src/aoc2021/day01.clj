@@ -10,18 +10,16 @@
 (defn part1 []
   (->> (get-input)
        (partition 2 1)
-       (map (fn [[a b]] (> b a)))
-       (remove false?)
-       (count)))
+       (filter (fn [[a b]] (> b a)))
+       count))
 
 (defn part2 []
   (->> (get-input)
        (partition 3 1)
        (map #(apply + %))
        (partition 2 1)
-       (map (fn [[a b]] (> b a)))
-       (remove false?)
-       (count)))
+       (filter (fn [[a b]] (> b a)))
+       count))
 
 
 

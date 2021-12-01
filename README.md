@@ -1,32 +1,16 @@
 # aoc2021
 
-FIXME: description
+Advent of Code 2021
 
-## Installation
+Solutions in Clojure
 
-Download from http://example.com/FIXME.
+Days:
+
+01  ⭐⭐
 
 ## Usage
 
-FIXME: explanation
-
-    $ java -jar aoc2021-0.1.0-standalone.jar [args]
-
-## Options
-
-FIXME: listing of options this app accepts.
-
-## Examples
-
-...
-
-### Bugs
-
-...
-
-### Any Other Sections
-### That You Think
-### Might be Useful
+    $ java -jar aoc2021-0.1.0-standalone.jar
 
 ## License
 
