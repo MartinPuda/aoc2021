@@ -7,20 +7,12 @@
        (s/split-lines)
        (map #(Integer/parseInt %))))
 
-(defn part1 []
-  (->> (get-input)
-       (partition 2 1)
-       (filter (fn [[a b]] (> b a)))
+(defn part1 [data]
+  (->> (partition 2 1 data)
+       (filter #(apply < %))
        count))
 
-(defn part2 []
-  (->> (get-input)
-       (partition 3 1)
+(defn part2 [data]
+  (->> (partition 3 1 data)
        (map #(apply + %))
-       (partition 2 1)
-       (filter (fn [[a b]] (> b a)))
-       count))
-
-
-
-
+       (part1)))
