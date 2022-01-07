@@ -18,13 +18,15 @@ Days:
 
 06  ⭐⭐
 
+07  ⭐⭐
+
 ## Usage
 
     $ java -jar aoc2021-0.1.0-standalone.jar
 
 ## License
 
-Copyright © 2021 FIXME
+Copyright © 2022
 
 This program and the accompanying materials are made available under the
 terms of the Eclipse Public License 2.0 which is available at
