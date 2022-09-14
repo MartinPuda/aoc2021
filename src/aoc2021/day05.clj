@@ -5,7 +5,7 @@
 (defn parse-line [data]
   (->> (s/split data #" -> ")
        (map #(s/split % #","))
-       (mapcat (fn [[x y]] [(Long/parseLong x) (Long/parseLong y)]))))
+       (mapcat (fn [[x y]] [(parse-long x) (parse-long y)]))))
 
 (defn horizontal-or-vertical? [[x1 y1 x2 y2]]
   (or (= x1 x2)

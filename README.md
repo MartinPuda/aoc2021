@@ -22,6 +22,10 @@ Days:
 
 08  ⭐
 
+09  ⭐
+
+10  ⭐
+
 ## Usage
 
     $ java -jar aoc2021-0.1.0-standalone.jar

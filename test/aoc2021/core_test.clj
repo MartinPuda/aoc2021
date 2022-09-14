@@ -5,7 +5,12 @@
             [aoc2021.day02 :as day02]
             [aoc2021.day03 :as day03]
             [aoc2021.day04 :as day04]
-            [aoc2021.day05 :as day05]))
+            [aoc2021.day05 :as day05]
+            [aoc2021.day06 :as day06]
+            [aoc2021.day07 :as day07]
+            [aoc2021.day08 :as day08]
+            [aoc2021.day09 :as day09]
+            [aoc2021.day10 :as day10]))
 
 (deftest day01
   (testing "Part 1"
@@ -36,3 +41,35 @@
     (is (= (day05/part1 (day05/get-input)) 5167)))
   (testing "Part2"
     (is (= (day05/part2 (day05/get-input)) 17604))))
+
+(deftest day05
+  (testing "Part1"
+    (is (= (day05/part1 (day05/get-input)) 5167)))
+  (testing "Part2"
+    (is (= (day05/part2 (day05/get-input)) 17604))))
+
+(deftest day06
+  (testing "Part1"
+    (is (= (day06/part 80) 361169)))
+  (testing "Part2"
+    (is (= (day06/part 256) 1634946868992))))
+
+(deftest day07
+  (testing "Part1"
+    (is (= (day07/part1 day07/input) 349357)))
+  (testing "Part2"
+    (is (= (day07/part2 day07/input)) 96708205)))
+
+(deftest day08
+  (testing "Part1"
+    (is (= (day08/part1 day08/input)) 365)))
+
+(deftest day09
+  (testing "Part1"
+    (is (= (day09/part1 (day09/parse-data (day09/get-input))) 478))))
+
+(deftest day10
+  (testing "Part1"
+    (is (= (day10/part1) 271245))))
+
+;271245

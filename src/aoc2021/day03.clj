@@ -31,14 +31,15 @@
 
 (defn rating [position data type]
   (let [columns (apply map vector data)]
-    (if (= (count data) 1) (first data)
-                           (let [f (frequencies (nth columns position))
-                                 most-common (if (= (f \0) (f \1))
-                                               (if (= type :oxygen) \1 \0)
-                                               (ffirst (sort-by val (if (= type :oxygen) > <) f)))]
-                             (recur (inc position)
-                                    (filter #(= (nth % position) most-common) data)
-                                    type)))))
+    (if (= (count data) 1)
+      (first data)
+      (let [f (frequencies (nth columns position))
+            most-common (if (= (f \0) (f \1))
+                          (if (= type :oxygen) \1 \0)
+                          (ffirst (sort-by val (if (= type :oxygen) > <) f)))]
+        (recur (inc position)
+               (filter #(= (nth % position) most-common) data)
+               type)))))
 
 (defn part2 [data]
   (* (vector->binary (rating 0 data :oxygen))

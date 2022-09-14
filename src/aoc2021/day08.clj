@@ -15,7 +15,7 @@
        (map s/trim)
        (mapcat #(s/split % #" "))
        (filter #(#{2 3 4 7} (count %)))
-       (count)))
+       count))
 
 ;(defn displays-to-strings [s1]
 ;  (-> s1

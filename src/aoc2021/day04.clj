@@ -4,14 +4,14 @@
 
 (defn parse-nums [data]
   (->> (s/split data #",")
-       (map #(Integer/parseInt %))))
+       (map #(parse-long %))))
 
 (defn parse-bingos [data]
   (->> data
        (remove s/blank?)
        (s/join " ")
        (#(s/split % #"\s+"))
-       (map #(Integer/parseInt %))
+       (map parse-long)
        (partition 25)))
 
 (defn get-input []

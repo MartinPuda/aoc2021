@@ -5,7 +5,7 @@
 (defn get-input []
   (->> (slurp "resources/public/input01.txt")
        (s/split-lines)
-       (map #(Integer/parseInt %))))
+       (map parse-long)))
 
 (defn part1 [data]
   (->> (partition 2 1 data)

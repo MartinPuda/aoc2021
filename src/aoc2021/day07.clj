@@ -14,7 +14,7 @@
         mx (apply max input)]
     (->> (for [i (range mn (inc mx))]
            (->> input
-                (map #(fuel-cost (Math/abs ^double (- i %))))
+                (map #(fuel-cost (abs (- i %))))
                 (apply +)))
          (apply min))))
 

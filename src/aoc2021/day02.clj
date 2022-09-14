@@ -7,7 +7,7 @@
        (s/split-lines)
        (map #(s/split % #" "))
        (map (fn [[direction value]]
-              [(keyword direction) (Integer/parseInt value)]))))
+              [(keyword direction) (parse-long value)]))))
 
 (defn mul-pos [state]
   (* (:x state)
